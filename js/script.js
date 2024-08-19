@@ -17,3 +17,22 @@ Stampiamo in pagina i due tiri e il risultato */
 
 5. Stampare in pagina i due risultati e il nome del vincitore.
 */
+
+
+/* Fase di preparazione */
+
+//1. Recuperare l'elemento d'interesse all'interno del DOM.
+const randomizer = document.getElementById('risultato');
+
+
+/* Fase di Elaborazione */
+const max = 6;
+
+//2. Generare un Nr. ramdom per la cpu e inserirlo in console.
+const cpu = Math.floor(Math.random() * max) + 1;
+console.log(cpu);
+
+//3. Generare un Nr. ramdom per il giocatore e inserirlo in console.
+const player = Math.floor(Math.random() * max) + 1;
+console.log(player);
+
