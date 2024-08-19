@@ -23,7 +23,7 @@ Stampiamo in pagina i due tiri e il risultato */
 
 //1. Recuperare l'elemento d'interesse all'interno del DOM.
 const randomizer = document.getElementById('risultato');
-
+let message;
 
 /* Fase di Elaborazione */
 const max = 6;
@@ -36,3 +36,17 @@ console.log(cpu);
 const player = Math.floor(Math.random() * max) + 1;
 console.log(player);
 
+/*4. Confrontare i due risultati ottenuti e indicare chi è il vincitore 
+   in base a chi ha ottenuto il Nr più alto.*/
+if (cpu === player) {
+    message = 'Nessuno ha vinto, hai ottenuto lo stesso nr. della cpu'
+    console.log(message)
+} else {
+    if (!(player > cpu)) {
+        message = 'ha vinto la cpu'
+        console.log(message)
+    } else {
+        message = 'hai vinto'
+        console.log(message)
+    }
+}
