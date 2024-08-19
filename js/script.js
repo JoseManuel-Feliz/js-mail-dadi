@@ -22,7 +22,7 @@ Stampiamo in pagina i due tiri e il risultato */
 /* Fase di preparazione */
 
 //1. Recuperare l'elemento d'interesse all'interno del DOM.
-const randomizer = document.getElementById('risultato');
+const randomizer = document.getElementById('result');
 let message;
 
 /* Fase di Elaborazione */
@@ -50,3 +50,8 @@ if (cpu === player) {
         console.log(message)
     }
 }
+
+/* Fase si Output */
+
+//5. Stampare in pagina i due risultati e il nome del vincitore.
+randomizer.innerHTML = `<span>cpu= ${cpu} player= ${player}</span> <p>${message}</p>`
