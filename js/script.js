@@ -67,14 +67,7 @@ Inventa una lista di email autorizzate
 Chiedi all’utente la sua email, con un piccolo form.
 controlla che sia nella lista di chi può accedere,
 stampa un messaggio appropriato sull’esito del controllo.
-Prima di partire a scrivere codice poniamoci qualche domanda:
-Che ci sia un array da qualche parte?
-Cosa devo controllare esattamente?
-:avviso: NOTE:
-- è vietato utilizzare il metodo includes()
-- La mail dell'utente va raccolta tramite input  e con l'aiuto di un button , non con un prompt.
-- Non è necessario usare il tag <form>, ma se lo usate, ricordate di impedire il comportamento di default dell'evento altrimenti il form ricaricherà la pagina. In alternativa, potete impostare il type="button" sul <button> .
-- L'esito del controllo deve essere stampato in pagina */
+ */
 
 
 /* 
@@ -97,8 +90,30 @@ STEPS
 
 //1. Creare una lista di email autorizzate
 const authorizedEmail = ['Donfulano@email.es', 'fulanito.email.es', 'mengano@email.es', 'zutano@email.es', 'perengano@email.es', 'Tizio@email.it', 'Caio@email.it', 'Sempronio@email.it']
-console.log(authorizedEmail)
+console.table(authorizedEmail)
 
 //2. Recuperare gli elementi d'interesse all'interno del DOM.
 const emailField = document.getElementById('email')
+const button = document.getElementById('form-btn')
 
+/* Fase di gestione eventi */
+/*3. Chiedere all'utente di inserire la sua email in un form.
+3.b  Raccogliere il dato inserito in una variabile.*/
+button.addEventListener('click', function (e) {
+    e.preventDefault();
+
+    const validEmail = emailField.value.trim();
+    let message;
+    for (let i = 0; i < authorizedEmail.length; i++) {
+        if (!validEmail) {
+            message = 'Non hai inserito nessuna email<br>Ps. Controlla i suggerimenti'
+        } else {
+            authorizedEmail[i] === validEmail ? message = `${validEmail} Mail valida, se autorizzato a procedere col login`
+                : message = `${validEmail} : Non è una email valida<br>Ps. Controlla i suggerimenti`;
+            break
+        }
+    }
+
+    console.log(message)
+
+})
