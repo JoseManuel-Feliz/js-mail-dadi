@@ -91,3 +91,14 @@ STEPS
     4.b Stampare in pagina se è una email autorizzata oppure no. 
 
 */
+
+
+/* Fase di preparazione */
+
+//1. Creare una lista di email autorizzate
+const authorizedEmail = ['Donfulano@email.es', 'fulanito.email.es', 'mengano@email.es', 'zutano@email.es', 'perengano@email.es', 'Tizio@email.it', 'Caio@email.it', 'Sempronio@email.it']
+console.log(authorizedEmail)
+
+//2. Recuperare gli elementi d'interesse all'interno del DOM.
+const emailField = document.getElementById('email')
+
