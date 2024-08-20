@@ -6,6 +6,8 @@ Stabilire il vincitore, in base a chi fa il punteggio più alto.
 Stampiamo in pagina i due tiri e il risultato */
 
 /* 
+STEPS
+ 
 1. Recuperare l'elemento d'interesse all'interno del DOM.
 
 2. Generare un Nr. ramdom per la cpu e inserirlo in console.
@@ -55,3 +57,37 @@ if (cpu === player) {
 
 //5. Stampare in pagina i due risultati e il nome del vincitore.
 randomizer.innerHTML = `<span>cpu= ${cpu} player= ${player}</span> <p>${message}</p>`
+
+
+
+/******************************************************************/
+
+/* ESERCIZIO 2 - Finta Login
+Inventa una lista di email autorizzate
+Chiedi all’utente la sua email, con un piccolo form.
+controlla che sia nella lista di chi può accedere,
+stampa un messaggio appropriato sull’esito del controllo.
+Prima di partire a scrivere codice poniamoci qualche domanda:
+Che ci sia un array da qualche parte?
+Cosa devo controllare esattamente?
+:avviso: NOTE:
+- è vietato utilizzare il metodo includes()
+- La mail dell'utente va raccolta tramite input  e con l'aiuto di un button , non con un prompt.
+- Non è necessario usare il tag <form>, ma se lo usate, ricordate di impedire il comportamento di default dell'evento altrimenti il form ricaricherà la pagina. In alternativa, potete impostare il type="button" sul <button> .
+- L'esito del controllo deve essere stampato in pagina */
+
+
+/* 
+STEPS
+
+1. Creare una lista di email autorizzate
+
+2. Recuperare gli elementi d'interesse all'interno del DOM.
+
+3. Chiedere all'utente di inserire la sua email in un form.
+    3.b  Raccogliere il dato inserito in una variabile.
+
+4. Verificare che l'email inserita sia all'interno delle email autorizzate.    
+    4.b Stampare in pagina se è una email autorizzata oppure no. 
+
+*/
