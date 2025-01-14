@@ -1,0 +1,49 @@
+/* RESET */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#dado {
+    height: 150px;
+    width: 150px;
+    border: 1px dashed black;
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.pallini.active {
+    display: block;
+}
+
+.pallini {
+    display: none;
+    width: 20px;
+    height: 20px;
+    margin: 1px;
+    border-radius: 50%;
+    background-color: black;
+}
+
+#dado-1 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.rotate.active {
+    align-self: flex-end;
+}
+
+.d-none {
+    display: none;
+}

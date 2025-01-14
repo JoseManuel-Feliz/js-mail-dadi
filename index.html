@@ -5,21 +5,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mail & Dadi</title>
+    <!-- STYLESHEET CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- SCRIPT JS -->
     <script defer src="./js/script.js"></script>
 </head>
 
 <body>
 
-    <div id="result"></div>
+    <div id="result">
+    </div>
+    <button id="lancia" type="submit">Lancia</button>
 
+    <div id="dado" class="dado">
 
+    </div>
+
+    </div>
     <div class="form-wrapper">
         <form action="">
+
             <label for="email">Inserisci email:</label>
             <input type="email" name="" id="email">
             <button id="form-btn" type="submit">Invia</button>
         </form>
+        <p id="message-wrapper"></p>
     </div>
 </body>
 
 </html>
+
+
+
+<!-- 
+rimuovere la classse activa al dado i per non renderlo visibile
+al dado due active al primo elemento di ciuscuna col e dare active
+ alla pimra col cosi che il elemento della prima col si allinii in basso
+
+
+
+al lancio del dado 3 active solo alla col in centro che contienen il dado 1 che farsi che compaia elemnto nella col centrale
+
+
+
+al lancio del dado 4 dare rimuvere lactive della prima col e anche di quella centrale poi dare active al secondo elemento di ciasquna col
+
+al lancio della del dado 5 dare al active asolo alla col centrale
+
+al lancio del dado 6 rimuovere la classe active dalla col centrale e dare tale classe a tutti gli elementi della col
+-->
